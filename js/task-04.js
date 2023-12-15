@@ -17,3 +17,12 @@ form.addEventListener("submit", (event) => {
 
   event.target.reset();
 });
+
+const input = document.querySelectorAll("label > input");
+input.forEach((elem) => elem.classList.add("input"));
+
+const btn = document.querySelector("form > button");
+btn.classList.add("btn");
+
+const label = document.querySelectorAll("form > label");
+label.forEach((elem) => elem.classList.add("label"));

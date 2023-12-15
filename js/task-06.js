@@ -43,3 +43,9 @@ createBtn.addEventListener("click", (event) => {
 destroyBtn.addEventListener("click", (event) => {
   destroyBoxes();
 });
+
+const controlsBtn = document.querySelectorAll("#controls > button");
+controlsBtn.forEach((elem) => elem.classList.add("controls-btn"));
+
+const controlsInput = document.querySelector("#controls > input");
+controlsInput.classList.add("controls-input");
