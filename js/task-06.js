@@ -4,11 +4,11 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-const controls = document.querySelector("#controls");
-const createBtn = document.querySelector("[data-create]");
-const destroyBtn = document.querySelector("[data-destroy]");
-const input = document.querySelector("[type=number]");
-const boxes = document.querySelector("#boxes");
+const controls = document.querySelector('#controls');
+const createBtn = document.querySelector('[data-create]');
+const destroyBtn = document.querySelector('[data-destroy]');
+const input = document.querySelector('[type=number]');
+const boxes = document.querySelector('#boxes');
 
 function createBoxes(amount) {
   let result = [];
@@ -25,27 +25,27 @@ function createBoxes(amount) {
     width += 10;
   }
 
-  return boxes.insertAdjacentHTML("afterbegin", result.join(""));
+  return boxes.insertAdjacentHTML('afterbegin', result.join(''));
 }
 
 function destroyBoxes() {
-  boxes.innerHTML = "";
+  boxes.innerHTML = '';
 }
 
-createBtn.addEventListener("click", (event) => {
+createBtn.addEventListener('click', event => {
   if (input.value >= 1 && input.value <= 100) {
     destroyBoxes();
     createBoxes(input.value);
-    input.value = "";
+    input.value = '';
   }
 });
 
-destroyBtn.addEventListener("click", (event) => {
+destroyBtn.addEventListener('click', event => {
   destroyBoxes();
 });
 
-const controlsBtn = document.querySelectorAll("#controls > button");
-controlsBtn.forEach((elem) => elem.classList.add("controls-btn"));
+const controlsBtn = document.querySelectorAll('#controls > button');
+controlsBtn.forEach(elem => elem.classList.add('controls-btn'));
 
-const controlsInput = document.querySelector("#controls > input");
-controlsInput.classList.add("controls-input");
+const controlsInput = document.querySelector('#controls > input');
+controlsInput.classList.add('controls-input');
