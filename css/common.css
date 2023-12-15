@@ -107,6 +107,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.04em;
   outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #name-input:hover,
@@ -138,6 +139,7 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input:hover,
@@ -161,6 +163,7 @@ img {
   height: 40px;
   margin-top: 8px;
   border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn:hover,
@@ -185,6 +188,7 @@ img {
   height: 40px;
   margin-top: 8px;
   border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .change-color:hover,
@@ -224,6 +228,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.04em;
   background-color: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .controls-input:hover,
@@ -246,6 +251,7 @@ img {
   width: 120px;
   height: 40px;
   border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .controls-btn:hover,
@@ -256,6 +262,7 @@ img {
 
 .controls-btn:last-child {
   background-color: #ff4e4e;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .controls-btn:last-child:hover,
