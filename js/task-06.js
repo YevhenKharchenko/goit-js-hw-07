@@ -11,8 +11,9 @@ const input = document.querySelector('[type=number]');
 const boxes = document.querySelector('#boxes');
 
 function createBoxes(amount) {
-  let result = [];
+  let result = '';
   let width = 30;
+  amount = Number(amount);
 
   for (let i = 0; i < amount; i++) {
     const markup = `<div
@@ -21,11 +22,11 @@ function createBoxes(amount) {
     width:${width}px;
     height:${width}px"
   ></div>`;
-    result.push(markup);
+    result += markup;
     width += 10;
   }
 
-  return boxes.insertAdjacentHTML('afterbegin', result.join(''));
+  boxes.innerHTML = result;
 }
 
 function destroyBoxes() {
@@ -37,12 +38,12 @@ createBtn.addEventListener('click', event => {
     destroyBoxes();
     createBoxes(input.value);
     input.value = '';
+  } else {
+    input.value = '';
   }
 });
 
-destroyBtn.addEventListener('click', event => {
-  destroyBoxes();
-});
+destroyBtn.addEventListener('click', destroyBoxes);
 
 const controlsBtn = document.querySelectorAll('#controls > button');
 controlsBtn.forEach(elem => elem.classList.add('controls-btn'));
